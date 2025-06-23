@@ -11,7 +11,7 @@ const gameState = {
         inventory: []
     },
     markets: [
-        { 
+        {
             name: "onionMarket", 
             description: "Black market for exploits and tools",
             items: [
