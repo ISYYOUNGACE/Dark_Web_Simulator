@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Web Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">DARK WEB SIMULATOR</div>
+        <div class="status-bar">
+            <div class="status-item">TOR: <span class="status-value" id="tor-status">Connected</span></div>
+            <div class="status-item">Balance: <span class="status-value" id="balance-status">120 BTC</span></div>
+            <div class="status-item">Rep: <span class="status-value" id="reputation-status">43</span></div>
+        </div>
+    </div>
+    
+    <div id="terminal">
+        <div id="output"></div>
+        <div id="input-area">
+            <span id="prompt">isyyoungace@darkweb:~$</span>
+            <input type="text" id="command-input" autocomplete="off" autofocus>
+        </div>
+    </div>
+    
+    <div class="footer">
+        Type 'help' for available commands | Press 'clear' to reset terminal
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

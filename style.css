@@ -1,0 +1,182 @@
+:root {
+    --bg-color: black;
+    --text-color: lime;
+    --border-color: darkgreen;
+    --warning-color: gold;
+    --error-color: orangered;
+    --success-color: mediumseagreen;
+    --highlight-color: deepskyblue;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 15px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.status-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+}
+
+.status-value {
+    margin-left: 5px;
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+#terminal {
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#output {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    overflow-y: auto;
+}
+
+#input-area {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+}
+
+#prompt {
+    margin-right: 10px;
+}
+
+#command-input {
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    flex-grow: 1;
+}
+
+.log-entry {
+    margin-bottom: 8px;
+    line-height: 1.4;
+    white-space: pre-wrap;
+}
+
+.system-msg {
+    color: var(--text-color);
+}
+
+.success-msg {
+    color: var(--success-color);
+}
+
+.warning-msg {
+    color: var(--warning-color);
+    animation: blink 1s infinite;
+}
+
+.error-msg {
+    color: var(--error-color);
+}
+
+.command-msg {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+.market-header {
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: var(--highlight-color);
+}
+
+.market-item {
+    margin-left: 20px;
+}
+
+.mission-active {
+    border-left: 3px solid var(--warning-color);
+    padding-left: 10px;
+    margin: 15px 0;
+}
+
+.trace-alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: pulse 1s infinite;
+    pointer-events: none;
+}
+
+@keyframes blink {
+    50% { opacity: 0.5; }
+}
+
+@keyframes pulse {
+    0% { opacity: 0.2; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0.2; }
+}
+
+.help-section {
+    margin: 15px 0;
+}
+
+.help-command {
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.ascii-art {
+    color: var(--highlight-color);
+    font-family: monospace;
+    white-space: pre;
+    margin: 10px 0;
+}
